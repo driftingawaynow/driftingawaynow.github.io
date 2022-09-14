@@ -23,10 +23,26 @@ h1 {
 h2 {
     font-size: 30px;
     padding-top: 3%;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: 25px;
+    margin: 15px 0;
 }
 
 main {
     text-align: center;
+}
+
+.desc {
+    color: #fff;
+    flex: 1;
+    text-align: left;
 }
 
 .arrow {
@@ -91,7 +107,6 @@ a:link.button, a:visited.button {
     padding: 14px 25px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
 }
   
 a:hover.button, a:active.button {
@@ -119,15 +134,32 @@ a:hover.button, a:active.button {
 }
  
 .column {
-    float: left;
-    width: 25%;
+    display: flex;
+    flex-direction: column;
+    background-color: #1F2833;
+    border: 1px solid gray;
+    margin: 5px;
+    min-width: 30%;
+    max-width: 75%;
+    width: 30%;
+    object-fit: scale-down;
     transform-style: preserve-3d;
     perspective: 1000px;
+}
+
+.colImg {
+    float: left;
+    width:  300px;
+    height: 300px;
+    object-fit: cover;
 }
 
 .parallax {
     transform: translateZ(15px);
     margin: 5%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .clients {
@@ -140,15 +172,6 @@ a:hover.button, a:active.button {
     content: "";
     display: table;
     clear: both;
-}
- 
-/* content decoration */
-.content {
-    background-color: #1F2833;
-    padding: 10px;
-    border: 1px solid gray;
-    transform-style: preserve-3d;
-    perspective: 1000px;
 }
  
 /* window size 850 width set */
@@ -194,5 +217,5 @@ a:hover.button, a:active.button {
     0% { opacity: 0; }
     50% { opacity: 0;}
     100% { opacity: 1; }
-  }
+}
 
