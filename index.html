@@ -18,7 +18,7 @@
     <canvas id="canvas"></canvas>
     <main>  
         <div class="header">
-            <h1 class="typewriter">driftingaway</h1>
+            <h1 class="name">driftingaway</h1>
             <p class="about"><b>Hi, I'm Charlie</b>. I'm currently studying computer science full time. 
             I've been doing music composition for 5 years and sound design for 4, primarily in the Minecraft Marketplace. 
             I've worked extensively on large scale projects around the world and would love to hear about yours!</p>
@@ -30,11 +30,11 @@
         <div class="row">
             <div class="column" data-tilt data-tilt-glare data-tilt-max-glare="0.2">
                 <img class="colImg" src="images/marketplace.png" alt="Marketplace Creator Tycoon" style="width:100%">
-                    <div class="parallax">
-                        <h3 class="title">Marketplace Creator Tycoon</h3>
-                        <p class="desc">Do you have what it takes to become a successful Marketplace creator? Find out in this new, free Tycoon world from Jigarbov Productions! 
-                        Play alone or with friends as you find inspiration, create exciting offers and grow your team. Just keep those good reviews coming in, or your business will go bust!</p>
-                        <a href="https://fanlink.to/Marketplace" target="_blank" rel="noopener noreferrer" class="button">Listen</a>
+                <div class="parallax">
+                    <h3 class="title">Marketplace Creator Tycoon</h3>
+                    <p class="desc">Do you have what it takes to become a successful Marketplace creator? Find out in this new, free Tycoon world from Jigarbov Productions! 
+                    Play alone or with friends as you find inspiration, create exciting offers and grow your team. Just keep those good reviews coming in, or your business will go bust!</p>
+                    <a href="https://fanlink.to/Marketplace" target="_blank" rel="noopener noreferrer" class="button">Listen</a>
                 </div>
             </div>
             <div class="column" data-tilt data-tilt-glare data-tilt-max-glare="0.2">
@@ -53,8 +53,10 @@
                 <img class="colImg" src="images/spotify.png" alt="Spotify Playlist Randomizer" style="width:100%">
                 <div class="parallax">
                     <h3 class="title">Spotify Playlist Randomizer</h3>
-                    <p class="desc">A webapp that creates randomized spotify playlists. It's currently in development mode, so if you want access I have to manually add you. Spotify does not allow me to open this up to everyone as it is a hobby project!
-                    Built mainly using Javascript and React. It interacts with the Spotify API to pull song recommendations and build custom and chaotic playlists.</p>
+                    <p class="desc">A webapp that creates randomized Spotify playlists using Spotify listening history, favorite artists, and
+                        various other parameters. The app autheticates through OAuth, using Express and Node.js to handle authentication requests to the Spotify
+                        API and pull song recommendations. The frontend is built in React.js to display playlist generation and randomization, deployed on Heroku which the user can
+                        interact with.</p>
                     <a href="https://github.com/driftingawaynow/spotify-playlist-randomizer" target="_blank" rel="noopener noreferrer" class="button">Github Repo</a>
                 </div>
             </div>
@@ -62,8 +64,8 @@
                 <img class="colImg" src="images/Pleiades.png" alt="Pleiades" style="width:100%">
                 <div class="parallax">
                     <h3 class="title">Pleiades</h3>
-                    <p class="desc">Pleiades is a humorous dating application that matches users based on the positions of the stars. 
-                    Built in a duration of 72 hours for the PennApps XXII College Hackathon, Pleiades won Best Humor Hack & Best Machine Learning Hack.</p>
+                    <p class="desc">Pleiades is a humorous dating application that matches users based on the positions of the stars. Data from a spreadsheet of astronomical data is fed it into Tangram’s deep learning environment 
+                        to find matches and display them with a frontend built in Flask. Built in a duration of 72 hours for the PennApps XXII College Hackathon, Pleiades won multiple awards including "Best Machine Learning Hack."</p>
                     <a href="https://github.com/driftingawaynow/Pleiades" target="_blank" rel="noopener noreferrer" class="button">Github Repo</a>
                 </div>
             </div>
@@ -74,6 +76,24 @@
                     <p class="desc">A JavaFX program that uses deeplearning4j to train models and compare the differences in learning rate and accuracy that occur when the user adjusts things such as batch size, epochs, etc. 
                     The GUI allows the user to change these variables and then allows the user to visualize the differences between these different models by showing the difference in learning rate and accuracy for each run.</p>
                     <a href="https://github.com/driftingawaynow/deeplearning4j" target="_blank" rel="noopener noreferrer" class="button">Github Repo</a>
+                </div>
+            </div>
+            <div class="column" data-tilt data-tilt-glare data-tilt-max-glare="0.2">
+                <img class="colImg" src="images/basys.png" alt="Basys 3" style="width:100%">
+                <div class="parallax">
+                    <h3 class="title">DDR FPGA</h3>
+                    <p class="desc">An implementation of the game ”Dance Dance Revolution” for the Basys 3 FPGA board, built in Verilog. The game parses input from an NES Controller and displays game progression visually using VGA output on a screen and
+                        lights on the Basys 3. The game also includes multiple increasing difficulties for a greater challenge.</p>
+                    <a href="https://github.com/driftingawaynow/DDR-FPGA" target="_blank" rel="noopener noreferrer" class="button">Github Repo</a>
+                </div>
+            </div>
+            <div class="column" data-tilt data-tilt-glare data-tilt-max-glare="0.2">
+                <img class="colImg" src="images/olo.png" alt="Our Little Oasis" style="width:100%">
+                <div class="parallax">
+                    <h3 class="title">Our Little Oasis</h3>
+                    <p class="desc">Our Little Oasis is a short 3d platformer game written in C# for the Unity engine. Being my first foray into solo game development, I faced numerous technical challenges centered around
+                        learning an entirely new engine and understanding the complete game development workflow from concept to completion. All assets (3d models, sound effects, music) were made by myself.</p>
+                    <a href="https://github.com/driftingawaynow/Our-Little-Oasis" target="_blank" rel="noopener noreferrer" class="button">Github Repo</a>
                 </div>
             </div>
         </div>
