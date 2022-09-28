@@ -155,9 +155,9 @@ a:hover.button, a:active.button {
     background-color: #1F2833;
     border: 1px solid gray;
     margin: 5px;
-    min-width: 30%;
+    min-width: 28%;
     max-width: 75%;
-    width: 30%;
+    width: 28%;
     object-fit: scale-down;
     transform-style: preserve-3d;
     perspective: 1000px;
@@ -188,6 +188,11 @@ a:hover.button, a:active.button {
     content: "";
     display: table;
     clear: both;
+}
+
+.nolink {
+    text-decoration: none;
+    color: white;
 }
  
 /* window size 850 width set */
