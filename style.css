@@ -80,7 +80,7 @@ main {
 /* Add a black background color to the top navigation */
 .topnav {
     overflow: hidden;
-    position: absolute;
+    position: fixed;
     width: 100%;
     z-index: 9999;
 }
