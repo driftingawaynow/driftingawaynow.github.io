@@ -135,7 +135,7 @@ a:link.button, a:visited.button {
     text-decoration: none;
 }
   
-a:hover.button, a:active.button {
+a:hover.button, a:active.button, a:hover.fa {
     background-color: #4bdde8;
 }
 
@@ -198,6 +198,14 @@ a:hover.button, a:active.button {
     text-decoration: none;
     color: white;
 }
+
+.fa { 
+    text-decoration: none; 
+    background-color: #359ea5;
+    color: white;
+    padding: 2vh 2vw;
+    text-align: center;
+} 
 
 /* fade in effect */
 @keyframes fadeIn {
