@@ -160,12 +160,16 @@ a:hover.button, a:active.button, a:hover.fa {
     background-color: #1F2833;
     border: 1px solid gray;
     margin: 1vh;
-    min-width: 35vw;
-    max-width: 70vw;
-    width: 35vw;
+    min-width: 30%;
+    max-width: 70%;
+    width: 30%;
     object-fit: scale-down;
     transform-style: preserve-3d;
     perspective: 1000px;
+}
+
+@media screen and (max-width: 500px)  {
+    .column {width: 100%;}
 }
 
 .colImg {
