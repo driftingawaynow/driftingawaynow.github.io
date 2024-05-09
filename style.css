@@ -1,6 +1,7 @@
+@font-face { font-family: chopin; src: url('ChopinScript.ttf'); } 
+
 html {
     scroll-behavior: smooth;
-    overflow: auto;
 }
 
 body {
@@ -9,12 +10,9 @@ body {
     background-image: linear-gradient(to bottom right, #0B0C10, #172535);
     color: white;
     margin: 0px;
-    padding: 0px;
     height: fit-content;
-    overflow-x: hidden; 
-    -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
-    overflow: auto;
+    padding-top: 100vh;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -22,31 +20,39 @@ body::-webkit-scrollbar {
     display: none;
   }
 
-canvas {
-    position: absolute;
-    perspective: -10px;
-}
-
 h1 {
-    font-family: Georgia, sans-serif;
-    font-size: 4em;
-    letter-spacing: -2px;
+    font-family: chopin;
 }
 
 .name {
     margin: 0px;
     display: flex;
-    width: 100vw;
-    height: 100vh;
     align-items: center;
     justify-content: center;
-    font-size: 60px;
-    animation: fadeIn 2s;
-    overflow: auto;
+    font-size: 10vw;
+    animation: fadeIn 1s;
+    font-weight: normal;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    perspective: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    .name {
+      font-size: 20vw;
+    }
+  }
+
+.Audio {
+    font-size: 50px;
+    padding-top: 10vh;
 }
 
 h2 {
-    font-size: 30px;
+    font-size: 35px;
     padding-top: 3vh;
     padding-left: 15vw;
     padding-right: 15vw;
@@ -62,7 +68,6 @@ h2 {
 
 main {
     text-align: center;
-    overflow: auto;
 }
 
 .desc {
@@ -79,8 +84,9 @@ main {
 
 /* Add a black background color to the top navigation */
 .topnav {
-    overflow: hidden;
     position: fixed;
+    top: 0;
+    right: 0;
     width: 100%;
     z-index: 9999;
 }
@@ -109,7 +115,6 @@ main {
 
 .header {
     text-align: center;
-    overflow: auto;
 }
 
 b {
@@ -190,6 +195,11 @@ a:hover.button, a:active.button, a:hover.fa {
     float: left;
     padding: 1vw;
     perspective: 1000px;
+    transition: transform .2s;
+}
+
+.clients:hover {
+    transform: scale(1.05);
 }
  
 .row:after {
@@ -216,5 +226,30 @@ a:hover.button, a:active.button, a:hover.fa {
     0% { opacity: 0; }
     50% { opacity: 0;}
     100% { opacity: 1; }
+}
+
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+     /* Make video to at least 100% wide and tall */
+    min-width: 100%; 
+    min-height: 100%; 
+
+    /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+    width: auto;
+    height: auto;
+    z-index: -9999;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    position: relative;
+    background-color: #0B0C10;
+    background-image: linear-gradient(to bottom right, #0B0C10, #172535);
+    margin: 0;
+    z-index: 1;
 }
 

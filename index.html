@@ -10,37 +10,42 @@
     <link rel="icon" href="images/favicon-32x32.png" type="image/x-icon">
     <!-- Add icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/aos/dist/aos.css">
+    <script src="node_modules/aos/dist/aos.js"></script>
   </head>
   <body id="About">
+    <script>
+        AOS.init();
+    </script>
     <div class="topnav">
         <a href="#Contact">Contact</a>
-        <a href="#Dev">Dev</a>
         <a href="#Audio">Audio</a>
         <a href="#About">About</a>
     </div>
-    <canvas id="canvas"></canvas>
     <main>  
         <div class="header">
+            <video autoplay muted loop id="myVideo">
+                <source src="images/portfolio.mp4" type="video/mp4">
+            </video>
             <h1 class="name">driftingaway</h1>
         </div>
-        <br><br><br><br><br>
-        <h2 id="Audio">Video Game Soundtracks</h2>
+        <div class="wrapper">
+        <div id="Audio"></div>
+        <h2 data-aos="fade-up" class="Audio">Audio</h2>
         <div class="row">
-            <div class="column" data-tilt data-tilt-glare data-tilt-max-glare="0.2">
+            <div data-aos="fade-up" class="column" data-tilt data-tilt-glare data-tilt-max-glare="0.2">
                 <img class="colImg" src="images/marketplace.png" alt="Marketplace Creator Tycoon" style="width:100%">
                 <div class="parallax">
                     <h3 class="title">Marketplace Creator Tycoon</h3>
-                    <p class="desc">Do you have what it takes to become a successful Marketplace creator? Find out in this new, free Tycoon world from Jigarbov Productions! 
-                    Play alone or with friends as you find inspiration, create exciting offers and grow your team. Just keep those good reviews coming in, or your business will go bust!</p>
+                    <p class="desc">Do you have what it takes to become a successful Marketplace creator? Find out in this new, free Tycoon world from Jigarbov Productions!</p>
                     <a href="https://fanlink.tv/Marketplace" target="_blank" rel="noopener noreferrer" class="button">Listen</a>
                 </div>
             </div>
-            <div class="column" data-tilt data-tilt-glare data-tilt-max-glare="0.2">
+            <div data-aos="fade-up" class="column" data-tilt data-tilt-glare data-tilt-max-glare="0.2">
                 <img class="colImg" src="images/simburbia.jpg" alt="Simburbia" style="width:100%">
                 <div class="parallax">
                     <h3 class="title">Simburbia</h3>
-                    <p class="desc">Begin your life as the mayor of the most advanced city simulator in Minecraft. 
-                    Make a power grid, zone land, and build your city into a bustling metropolis or watch it turn to rubble as massive disasters threaten your progress.</p>
+                    <p class="desc">Begin your life as the mayor of the most advanced city simulator in Minecraft.</p>
                     <a href="https://fanlink.tv/Simburbia" target="_blank" rel="noopener noreferrer" class="button">Listen</a>
                 </div>
             </div>
@@ -48,101 +53,49 @@
         
         <br><br><br><br><br>
 
-        <h2 id="Dev">Development Projects</h2>
-        <div class="row">
-            <div class="column" data-tilt data-tilt-glare data-tilt-max-glare="0.2">
-                <img class="colImg" src="images/spotify.png" alt="Spotify Playlist Randomizer" style="width:100%">
-                <div class="parallax">
-                    <h3 class="title">Spotify Playlist Randomizer</h3>
-                    <p class="desc">A webapp that creates randomized Spotify playlists using Spotify listening history, favorite artists, and
-                        various other parameters. The app autheticates through OAuth, using Express and Node.js to handle authentication requests to the Spotify
-                        API and pull song recommendations. The frontend is built in React.js to display playlist generation and randomization, deployed on Heroku which the user can
-                        interact with.</p>
-                    <a href="https://github.com/driftingawaynow/spotify-playlist-randomizer" target="_blank" rel="noopener noreferrer" class="button">Github Repo</a>
-                </div>
-            </div>
-            <div class="column" data-tilt data-tilt-glare data-tilt-max-glare="0.2">
-                <img class="colImg" src="images/Pleiades.png" alt="Pleiades" style="width:100%">
-                <div class="parallax">
-                    <h3 class="title">Pleiades</h3>
-                    <p class="desc">Pleiades is a humorous dating application that matches users based on the positions of the stars. Data from a spreadsheet of astronomical data is fed it into Tangram’s deep learning environment 
-                        to find matches and display them with a frontend built in Flask. Built in a duration of 72 hours for the PennApps XXII College Hackathon, Pleiades won multiple awards including "Best Machine Learning Hack."</p>
-                    <a href="https://github.com/driftingawaynow/Pleiades" target="_blank" rel="noopener noreferrer" class="button">Github Repo</a>
-                </div>
-            </div>
-            <div class="column" data-tilt data-tilt-glare data-tilt-max-glare="0.2">
-                <img class="colImg" src="images/deep.png" alt="Neural Network" style="width:100%">
-                <div class="parallax">
-                    <h3 class="title">Neural Network</h3>
-                    <p class="desc">A JavaFX program that uses deeplearning4j to train models and compare the differences in learning rate and accuracy that occur when the user adjusts things such as batch size, epochs, etc. 
-                    The GUI allows the user to change these variables and then allows the user to visualize the differences between these different models by showing the difference in learning rate and accuracy for each run.</p>
-                    <a href="https://github.com/driftingawaynow/deeplearning4j" target="_blank" rel="noopener noreferrer" class="button">Github Repo</a>
-                </div>
-            </div>
-            <div class="column" data-tilt data-tilt-glare data-tilt-max-glare="0.2">
-                <img class="colImg" src="images/basys.png" alt="Basys 3" style="width:100%">
-                <div class="parallax">
-                    <h3 class="title">DDR FPGA</h3>
-                    <p class="desc">An implementation of the game ”Dance Dance Revolution” for the Basys 3 FPGA board, built in Verilog. The game parses input from an NES Controller and displays game progression visually using VGA output on a screen and
-                        lights on the Basys 3. The game also includes multiple increasing difficulties for a greater challenge.</p>
-                    <a href="https://github.com/driftingawaynow/DDR-FPGA" target="_blank" rel="noopener noreferrer" class="button">Github Repo</a>
-                </div>
-            </div>
-            <div class="column" data-tilt data-tilt-glare data-tilt-max-glare="0.2">
-                <img class="colImg" src="images/olo.png" alt="Our Little Oasis" style="width:100%">
-                <div class="parallax">
-                    <h3 class="title">Our Little Oasis</h3>
-                    <p class="desc">Our Little Oasis is a short 3d platformer game written in C# for the Unity engine. Being my first foray into solo game development, I faced numerous technical challenges centered around
-                        learning an entirely new engine and understanding the complete game development workflow from concept to completion. All assets (3d models, sound effects, music) were made by myself.</p>
-                    <a href="https://github.com/driftingawaynow/Our-Little-Oasis" target="_blank" rel="noopener noreferrer" class="button">Github Repo</a>
-                </div>
-            </div>
-        </div>
-
-        <br><br><br><br><br>
-
-        <h2>Previously worked with:</h2>
-        <div class="row">
-            <div class="clients">
+        <h2 data-aos="fade-up">Previously worked with:</h2>
+        <div data-aos="fade-up" class="row">
+            <div data-aos="fade-up" class="clients">
                 <a href="https://www.jigarbov.net/" target="_blank">
                     <img alt="Jigarbov Productions" src="images/jigarbov.png">
                 </a>
                 <h3><a class="nolink" href="https://www.jigarbov.net/" target="_blank">Jigarbov Productions</a></h3>
             </div>
-            <div class="clients">
+            <div data-aos="fade-up" class="clients">
                 <a href="https://www.sapphirestudios.org/" target="_blank">
                     <img alt="Sapphire Studios" src="images/sapphire.png">
                 </a>
                 <h3><a class="nolink" href="https://www.sapphirestudios.org/" target="_blank">Sapphire Studios</a></h3>
             </div>
-            <div class="clients">
+            <div data-aos="fade-up" class="clients">
                 <a href="https://podcrash.com/" target="_blank">
                     <img alt="Podcrash" src="images/podcrash.png">
                 </a>
                 <h3><a class="nolink" href="https://podcrash.com/" target="_blank">Podcrash</a></h3>
             </div>
-            <div class="clients">
+            <div data-aos="fade-up" class="clients">
                 <a href="https://twitter.com/kubostudiosltd" target="_blank">
                     <img alt="Kubo Studios" src="images/kubo.png">
                 </a>
                 <h3><a class="nolink" href="https://twitter.com/kubostudiosltd" target="_blank">Kubo Studios</a></h3>
             </div>
-            <div class="clients">
+            <div data-aos="fade-up" class="clients">
                 <a href="https://twitter.com/FairSquareGames" target="_blank">
                     <img alt="Fair Square Games" src="images/fairsquare.png">
                 </a>
                 <h3><a class="nolink" href="https://twitter.com/FairSquareGames" target="_blank">Fair Square Games</a></h3>
             </div>
         </div>
-        <h2 id="Contact">Contact</h2>
-        <a href="mailto:cet2019@gmail.com" target="_blank" rel="noopener noreferrer" class="button">Email</a>
+        <h2 data-aos="fade-up" id="Contact">Contact</h2>
+        <div data-aos="fade-up">
+        <a href="mailto:driftingawaynow@gmail.com" target="_blank" rel="noopener noreferrer" class="button">Email</a>
         <a href="https://open.spotify.com/artist/6DA73TbGaLyHWiz8EsbDs8" target="_blank" rel="noopener noferrer" class="fa fa-spotify"></a>
         <a href="https://www.youtube.com/c/driftingaway" target="_blank" rel="noopener noreferrer" class="fa fa-youtube"></a>
         <a href="https://twitter.com/driftingawaynow" target="_blank" rel="noopener noreferrer" class="fa fa-twitter"></a>
-        
+        </div>
         <br><br><br><br><br><br><br><br>
+        </div>
     </main>
-	<script src="index.js"></script>
     <script src="vanilla-tilt.js"></script>
   </body>
 </html>
