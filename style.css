@@ -39,6 +39,8 @@ h1 {
     text-align: center;
     perspective: 10px;
     line-height: normal;
+    font-kerning: normal;
+    letter-spacing: normal;
 }
 
 @media only screen and (max-width: 768px) {
