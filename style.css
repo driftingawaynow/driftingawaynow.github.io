@@ -201,8 +201,9 @@ a:hover.button, a:active.button, a:hover.fa {
     transition: transform .2s;
 }
 
-.clients:hover {
-    transform: scale(1.05);
+#clients:hover {
+    transition: transform .2s;
+    transform: scale(1.1);
 }
  
 .row:after {
